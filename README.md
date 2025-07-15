@@ -58,7 +58,9 @@ NOTE: gffcompare-0.11.2 is not included and can be installed via Conda.
 
 - `transcriptome_build_pipe.sh`: Main end-to-end pipeline script (trimming, alignment, assembly, merging, comparison). 
 
-- `pre_TPM_count.sh` : Filters out low expression isoforms, reducing total transcript numbers. 
+- `pre_TPM_count.sh` : generates TPM values for each sample and needed directiories inside the filtering directory. 
+
+- `final_filtering.sh` filters the final gtf and runs gffcompare to output a last .gtf draft. 
 
 - `example.yaml`: A template for `configs/paths.yaml`, specifying paths to input files, reference files, and tool directories.
 
@@ -75,16 +77,18 @@ R108_Nodule_tx_Git/
 │   ├── install_tools.sh # Install tools file 
 │   ├── make_directories.sh # Makes base directories
 │   ├── transcriptome_build_pipe.sh # Main pipeline script
-│   └── pre_TPM_count.sh
+│   ├── pre_TPM_count.sh
+│   └── final_filtering.sh
 ├── README.md               # Documentation
 └── LICENSE   
 ```
 - `install_tools.sh` generates the tools directory.
 - `make_directories.sh` generates results, reference, raw_data and filtering directories inside of the Pipeline_directory.
 - `transcriptome_build_pipeline.sh` further directories are created in results directory. 
-- `pre_TPM_count.sh` generates needed directiories inside in the filtering directory.
+- `pre_TPM_count.sh` generates TPM values for each sample and needed directiories inside the filtering directory.
+- `final_filtering.sh` filters the final gtf and runs gffcompare to output a last .gtf draft. 
 
-After running the four .sh files thr directory structure will look like the one below: 
+After running the five .sh files thr directory structure will look like the one below: 
 
 ```bash
 R108_Nodule_tx_Git/
@@ -95,7 +99,8 @@ R108_Nodule_tx_Git/
 │   ├── install_tools.sh # Install tools file 
 │   ├── make_directories.sh # Makes base directories
 │   ├── transcriptome_build_pipe.sh # Main pipeline script
-│   └── pre_TPM_count.sh
+│   ├── pre_TPM_count.sh
+│   └── final_filtering.sh
 ├── README.md               # Documentation
 ├── LICENSE   
 └── Pipeline_directory/
