@@ -16,8 +16,7 @@ It performs quality control, trimming, alignment to the R108 reference genome, t
 - [Installation](#installation)  
 - [Usage](#usage)  
 - [Outputs](#outputs)  
-- [Transcript Filtering](#transcript-filtering)
-- [Troubleshooting](#troubleshooting)  
+- [Transcript Filtering](#transcript-filtering) 
 - [License](#license)  
 - [Citation](#citation) 
 
@@ -364,3 +363,30 @@ conda activate gffcompare_env
 
 It also outputs a new `.gtf` annotation which should be taken and used for downstream steps. This `.annoted.gtf`
 provides a new naming system as well as identifies transcripts based on if they are new or old. 
+
+
+## License
+
+- **Code**: MIT License © 2025 <Matthew Jolly>. See `LICENSE`.
+- **Text/docs/figures in this repo**: Creative Commons Attribution 4.0 International (**CC BY 4.0**).
+- **Third-party tools and external genomes/annotations/data** remain under their own licenses/terms; follow the providers’ terms.
+
+
+## Citation
+
+**This repository**
+- Matthew Jolly (Gifford Lab, Univesity of Warwick). *Medicago truncatula R108 nodule transcriptome: tutorial & pipeline*. GitHub, `v0.1.0` (2025)
+
+**Software**
+
+- 'fastqc_v0.12.1' : Andrews S. (2010) FastQC: A Quality Control Tool for High Throughput Sequence Data
+- 'Trimmomatic-0.39' : Bolger AM, Lohse M, Usadel B. Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics. 2014;30(15):2114-2120. doi:10.1093/bioinformatics/btu170
+- 'hisat2-2.2.1' : Kim D, Paggi JM, Park C, Bennett C, Salzberg SL. Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype. Nat Biotechnol. 2019;37(8):907-915. doi:10.1038/s41587-019-0201-4
+- 'samtools-1.18' : Li H, Handsaker B, Wysoker A, et al. The Sequence Alignment/Map format and SAMtools. Bioinformatics. 2009;25(16):2078-2079. doi:10.1093/bioinformatics/btp352
+- 'stringtie-3.0.0' : Pertea M, Pertea GM, Antonescu CM, Chang TC, Mendell JT, Salzberg SL. StringTie enables improved reconstruction of a transcriptome from RNA-seq reads. Nat Biotechnol. 2015;33(3):290-295. doi:10.1038/nbt.3122
+- 'gffread-0.12.7' : Pertea G, Pertea M. GFF Utilities: GffRead and GffCompare. F1000Res. 2020;9:ISCB Comm J-304. Published 2020 Apr 28. doi:10.12688/f1000research.23297.2
+
+**Genome and Annotation**
+
+- Kaur P, Lui C, Dudchenko O, et al. Delineating the Tnt1 Insertion Landscape of the Model Legume Medicago truncatula cv. R108 at the Hi-C Resolution Using a Chromosome-Length Genome Assembly. Int J Mol Sci. 2021;22(9):4326. Published 2021 Apr 21. doi:10.3390/ijms22094326
+
