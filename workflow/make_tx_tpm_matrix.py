@@ -2,7 +2,7 @@
 # make_tx_tpm_matrix.py
 import glob, os, re, gzip, pandas as pd, sys, io
 
-gtf_dir   = 'stringtie_transcript'              # adjust if needed
+gtf_dir   = 'expr_gtf'              # adjust if needed
 out_file  = 'matrices/tx_tpm.csv'   # will create matrices/ automatically
 
 os.makedirs(os.path.dirname(out_file), exist_ok=True)
